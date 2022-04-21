@@ -38,7 +38,7 @@
           await Moralis.initPlugins();
           dex = Moralis.Plugins.oneInch;
 
-          await Moralis.Web3.enable();
+          await Moralis.enable();
           if(!Moralis.User.current())
             await Moralis.authenticate();
       })();
