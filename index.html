@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Degen</title>
+    <title>Vanilla Boilerplate</title>
 
 	  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script src="https://npmcdn.com/moralis@latest/dist/moralis.js"></script>
@@ -16,8 +16,8 @@
 
   <body>
 
-    <h2>Swap BNB to GEMEARN </h2>
-    <input type="text" value="0.5">BNB</input>
+    <h2>Swap ETH to 1INCH </h2>
+    <input type="text" value="0.01"></input>
     <br>
     <button id="btn-login" onclick="swap()">SWAP!</button>
 
@@ -29,8 +29,8 @@
 
     <script>
       // connect to Moralis server
-      Moralis.initialize("cno0PkKqxgRsShqPg1yPpUgKLd6r9Pumm6qDlA8w");
-      Moralis.serverURL = "https://ec7qmfpxpf2j.usemoralis.com:2053/server";
+      Moralis.initialize("ppKsJ87zo59ln2WnmJm3n66TM9mq06I4GYGqLxRq");
+      Moralis.serverURL = "https://5naflsgtclgx.moralisweb3.com:2053/server";
 
       let dex;
 
@@ -52,7 +52,7 @@
         const options = {chain:"eth", 
                               fromTokenAddress:NATIVE_ADDRESS, 
                               toTokenAddress:ONEINCH_ADDRESS,
-                              amount: Number(Moralis.Units.GEM("0.5")),
+                              amount: Number(Moralis.Units.ETH("0.01")),
                               fromAddress: Moralis.User.current().get("ethAddress"),
                               slippage: 1
                           }
