@@ -40,7 +40,7 @@
           await Moralis.initPlugins();
           dex = Moralis.Plugins.oneInch;
 
-          await Moralis.enable();
+          await Moralis.Web3.enable();
           if(!Moralis.User.current())
             await Moralis.authenticate();
       })();
